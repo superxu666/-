@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			display: none;
+			border: 1px solid #f90;
+			background-color: #ffefa4;
+			padding: 10px;
+			width: 150px;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+<label>
+	<input type="checkbox" name="">
+	两周内自动登录
+</label>
+<div>为了您的个人安全，请不要再网吧等公共场所使用此功能</div>
+<script type="text/javascript">
+	window.onload = function(){
+		var laber = document.getElementsByTagName("label")[0];
+		var div = document.getElementsByTagName("div")[0];
+		laber.onmouseover = function(){
+			div.style.display = "block";
+		};
+		laber.onmouseout = function(){
+			div.style.display = "none";
+		};
+	};
+</script>
+</body>
+</html>

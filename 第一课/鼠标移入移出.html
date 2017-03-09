@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			background: #000;
+			color: #fff;
+			width: 160px;
+			height: 160px;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+<div>鼠标移入改变样式，鼠标移出恢复</div>
+<script type="text/javascript">
+	window.onload = function () {
+		var div = document.getElementsByTagName("div")[0];
+		div.onmouseover = function(){
+			div.style.border = "10px solid red";
+			div.style.background = "#fff";
+			div.style.color = "red";
+			div.style.width = "140px";
+			div.style.height = "140px";
+		};
+		div.onmouseout = function(){
+			div.style.background = "#000";
+			div.style.color = "#fff";
+			div.style.border = "10px solid #000";
+		};
+	};
+</script>
+</body>
+</html>

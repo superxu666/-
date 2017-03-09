@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" name="" value="北京市">
+<br>
+<input type="text" name="" value="朝阳区">
+<br>
+<button>传参</button>
+<script type="text/javascript">
+	var btn = document.getElementsByTagName("button")[0];
+
+	function myfn (a, b) {
+		alert(a.value);
+		alert(b.value);
+	};
+
+	btn.onclick = function(){
+		var inputs = document.getElementsByTagName("input");
+		myfn(inputs[0], inputs[1]);
+	};
+</script>
+</body>
+</html>

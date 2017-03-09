@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>控制div属性</title>
+	<style type="text/css">
+		.div1 {
+			width: 100px;
+			height: 100px;
+			background-color: #000;
+			margin: 0 auto;
+		}
+		body {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class="wrap">
+<form>
+	<input type="button" value="变宽" name="">
+	<input type="button" value="变高" name="">
+	<input type="button" value="变色" name="">
+	<input type="button" value="隐藏" name="">
+	<input type="button" value="重置" name="">
+</form>
+<div class="div1"></div>
+</div>
+
+<script type="text/javascript">
+	window.onload = function() {
+		var inputs = document.getElementsByTagName("input");
+		var oDiv = document.getElementsByClassName("div1")[0];
+
+		inputs[0].onclick = function(){
+			oDiv.style.width = "200px";
+		};
+		inputs[1].onclick = function(){
+			oDiv.style.height = "200px";
+		};
+		inputs[2].onclick = function(){
+			oDiv.style.backgroundColor = "red";
+		};
+		inputs[3].onclick = function(){
+			oDiv.style.display = "none";
+		};
+		inputs[4].onclick = function(){
+			oDiv.style.display = 'block';
+			oDiv.style.height = "100px";
+			oDiv.style.width = "100px";
+		};
+
+
+	}
+
+
+	// 源码
+// var changeStyle = function (elem, attr, value)
+// {
+// 	elem.style[attr] = value
+// };
+// window.onload = function ()
+// {
+// 	var oBtn = document.getElementsByTagName("input");
+// 	var oDiv = document.getElementById("div1");
+// 	var oAtt = ["width","height","background","display","display"];
+// 	var oVal = ["200px","200px","red","none","block"];
+
+// 	for (var i = 0; i < oBtn.length; i++)
+// 	{
+// 		oBtn[i].index = i;
+// 		oBtn[i].onclick = function ()
+// 		{
+// 			this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+// 			changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+// 		}	
+// 	}
+// };
+
+</script>
+</body>
+</html>

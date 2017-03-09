@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body,ul,li{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+
+			background: #FDD;
+		}
+		.current {
+			background: #fff!important;
+		}
+		#btn {
+			margin: 0 auto;
+			width: 100px;
+			overflow: hidden;
+		}
+		#btn li {
+			width: 10px;
+			height: 10px;
+			margin-right: 10px;
+			float: left;
+			list-style-type: none;
+			cursor: pointer;
+		}
+		#red {
+			background: red;
+			border: 6px solid red;
+		}
+		#green {
+			background: green;
+			border: 6px solid green;
+		}
+		#black {
+			background: black;
+			border: 6px solid black;
+		}
+		#nav {
+			width: 249px;
+			height: 25px;
+			margin: 0 auto;
+			text-align: center;
+			border: 1px solid #fff;
+		}
+		#nav li{
+			width: 49px;
+			height: 25px;
+			float: left;
+			list-style-type: none;
+			background: red;
+			border-right: 1px solid #fff;
+		}
+		#nav li a{
+			text-decoration: none;
+			color: #fff;
+			height: 25px;
+			line-height: 25px;
+		}
+		#nav li a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body id="body">
+<ul id="btn">
+	<li id="red" class="current"></li>
+	<li id="green"></li>
+	<li id="black"></li>
+</ul>
+<ul id="nav">
+	<li id="cont1"><a href="#">新闻</a></li>
+	<li id="cont2"><a href="#">娱乐</a></li>
+	<li id="cont3"><a href="#">体育</a></li>
+	<li id="cont4"><a href="#">电影</a></li>
+	<li id="cont5" style="border-right: none;"><a href="#">音乐</a></li>
+</ul>
+<script type="text/javascript">
+	window.onload = function(){
+		var aUl = document.getElementById("btn");
+		var oLi = aUl.getElementsByTagName("li");
+		var body = document.getElementById("body");
+		var nav = document.getElementById("nav");
+		var currentBtn = oLi[0];
+
+		for (var i = 0; i < oLi.length; i++) {
+
+			oLi[i].onclick = function(){
+				currentBtn.className = "";
+				currentBtn = this;
+				this.className = "current";
+
+			};
+		}
+	};
+</script>
+</body>
+</html>

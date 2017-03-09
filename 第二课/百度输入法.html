@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		ul{
+			margin: 0;
+			padding: 0;
+			width: 40px;
+			border: 1px solid #000;
+			display: none;
+		}
+		li{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			width: 40px;
+		}
+		li:hover{
+			background: #f60;
+		}
+		#close {
+			border-top: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<input type="button" name="" value="输入法">
+<ul id="wrap">
+	<li>手写</li>
+	<li>拼音</li>
+	<li id="close">关闭</li>
+</ul>
+<script type="text/javascript">
+	window.onload = function(){
+		var input = document.getElementsByTagName("input")[0];
+		var oul = document.getElementById("wrap");
+		var close = document.getElementById("close");
+		input.onclick = function(){
+
+			if (oul.style.display == "block") {
+				oul.style.display = "none";
+			} else {
+				oul.style.display = "block";
+			}
+		};
+		close.onclick = function (){
+			oul.style.display = "none";
+		};
+
+	};
+
+
+	// 源码
+// window.onload = function ()
+// {
+// 	var oBtn = document.getElementsByTagName("button")[0];
+// 	var oIme = document.getElementById("ime");
+// 	var oClose = document.getElementById("close"); 	
+// 	var style = oIme.style;
+// 	oBtn.onclick = function()
+// 	{		
+// 		style.display = style.display == "block" ? "none" : "block"
+// 	};
+// 	oClose.onclick = function()
+// 	{
+// 		style.display = "none"	
+// 	}
+// }
+
+
+</script>
+</body>
+</html>
